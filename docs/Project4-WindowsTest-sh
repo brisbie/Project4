@@ -1,0 +1,17 @@
+@echo off
+echo [TEST 1] Building B+ Tree
+project4.exe --build
+
+echo [TEST 2] Index Search (Valid Records)
+project4.exe -search 10001
+project4.exe -search 90210
+project4.exe -search 60601
+
+echo [TEST 3] Index Search (Invalid Records)
+project4.exe -search 00000
+
+echo [TEST 4] Sequence Set Scan (State Search)
+project4.exe -state VI
+
+echo [TEST COMPLETE] All tests finished
+pause
